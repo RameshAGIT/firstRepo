@@ -12,7 +12,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(features="src/test/resources/features",
 					glue={"stepDefinitions"},
 					//tags= {"@GoogleTest"},
-					plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
+					plugin = {"com.cucumber.listener.ExtentCucumberFormatter:test-output/cucumber-reports/report.html"},
 					monochrome = true
 				) 
 
