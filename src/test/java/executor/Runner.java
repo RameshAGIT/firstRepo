@@ -11,7 +11,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 //@RunWith(Cucumber.class) 
 @CucumberOptions(features="src/test/resources/features",
 					glue={"stepDefinitions"},
-					tags= {"@GoogleTest"},
+					tags= {"@UserTest"},
 					plugin = {"com.cucumber.listener.ExtentCucumberFormatter:test-output/cucumber-reports/report.html"},
 					monochrome = true
 				) 
