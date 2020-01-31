@@ -1,7 +1,11 @@
 Feature: To Test Google search
 
 	@GoogleTest
-	Scenario: Google search Test
+	Scenario Outline: Google search Test
 		Given Open browser and launch Google
-		When Enter search key word
+		When Enter "<SearchText>" to search
 		Then User should able to search
+		
+		Examples:
+      | SearchText				|
+      | oneindia english	|

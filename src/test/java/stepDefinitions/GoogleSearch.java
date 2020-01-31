@@ -22,9 +22,9 @@ public class GoogleSearch {
 		driver.manage().window().maximize();
 	}
 
-	@When("^Enter search key word$")
-	public void enter_search_key_word() throws Throwable {
-		driver.findElement(By.name("q")).sendKeys("oneindia english");
+	@When("^Enter \"([^\"]*)\" to search$")
+	public void enter_search_key_word(String searchTxt) throws Throwable {
+		driver.findElement(By.name("q")).sendKeys(searchTxt);
 		driver.findElement(By.name("btnK")).submit();
 		System.out.println("When");
 	}
