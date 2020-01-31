@@ -24,7 +24,7 @@ public class GoogleSearch {
 
 	@When("^Enter search key word$")
 	public void enter_search_key_word() throws Throwable {
-		driver.findElement(By.name("q")).sendKeys("oneindia");
+		driver.findElement(By.name("q")).sendKeys("oneindia english");
 		driver.findElement(By.name("btnK")).submit();
 		System.out.println("When");
 	}

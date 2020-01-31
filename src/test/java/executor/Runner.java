@@ -17,7 +17,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 				) 
 
 
-//public class UserRunner {
+//public class Runner {
 public class Runner extends AbstractTestNGCucumberTests {
 	@AfterClass
     public static void writeExtentReport() {
