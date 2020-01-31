@@ -18,7 +18,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
 //public class UserRunner {
-public class UserRunner extends AbstractTestNGCucumberTests {
+public class Runner extends AbstractTestNGCucumberTests {
 	@AfterClass
     public static void writeExtentReport() {
         Reporter.loadXMLConfig(new File("config/report.xml"));

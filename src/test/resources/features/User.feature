@@ -1,7 +1,7 @@
 Feature: To Test the Shipment details
  
   @UserTest
-  Scenario Outline: Title of your scenario outline 
+  Scenario Outline: User Test 
     Given Start chrome browser and open the application
     When Enter "<UserName>" and click search
     Then Validate user name "<UserName>","<ShipmentId>","<Phone>","<Email>" is displayed
