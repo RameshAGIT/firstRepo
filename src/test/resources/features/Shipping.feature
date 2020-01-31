@@ -1,4 +1,4 @@
-Feature: To Test the Shipping details in DATAX Shipping Company 
+Feature: To Test Shipping details 
  
  @ShippingTest
   Scenario Outline: Shipping Test 

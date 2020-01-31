@@ -1,4 +1,4 @@
-Feature: Test Google search
+Feature: To Test Google search
 
 	@GoogleTest
 	Scenario: Google search Test

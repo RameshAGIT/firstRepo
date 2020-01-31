@@ -1,4 +1,4 @@
-Feature: To Test the Shipment details
+Feature: To Test User details
  
   @UserTest
   Scenario Outline: User Test 
