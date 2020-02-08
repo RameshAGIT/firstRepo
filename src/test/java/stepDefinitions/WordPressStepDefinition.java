@@ -17,6 +17,7 @@ public class WordPressStepDefinition {
 		System.setProperty("webdriver.chrome.driver","R:\\Ramesh\\SupportingFiles\\drivers\\chromedriver_2.40.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize(); 
+		System.out.println("Launch WordPress");
 		driver.get("https://s1.demo.opensourcecms.com/wordpress/wp-login.php"); 
 	} 
 

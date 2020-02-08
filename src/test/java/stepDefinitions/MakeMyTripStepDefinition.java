@@ -19,6 +19,7 @@ public class MakeMyTripStepDefinition {
 		System.setProperty("webdriver.chrome.driver","R:\\Ramesh\\SupportingFiles\\drivers\\chromedriver_2.40.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize(); 
+		System.out.println("Launch MakeMyTrip");
 		driver.get("https://www.makemytrip.com/"); 
 	}
 
