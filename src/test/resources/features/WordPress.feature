@@ -1,6 +1,6 @@
 Feature: To Test Wordpress Login 
  
-  @SmokeTest @RegressionTest
+  @SmokeSuite @RegressionSuite
   Scenario Outline: Wordpress Test 
     Given Start chrome browser and open the Wordpress application
     When Enter UserName and Password and Click on Login button
