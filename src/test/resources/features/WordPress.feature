@@ -1,4 +1,4 @@
-Feature: To Test Wordpress Login 
+Feature: To Test Wordpress 
  
   @SmokeSuite @RegressionSuite
   Scenario Outline: Wordpress Test 

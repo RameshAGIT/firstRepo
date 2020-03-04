@@ -3,9 +3,12 @@ package stepDefinitions;
 import org.openqa.selenium.By; 
 import org.openqa.selenium.WebDriver; 
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.aventstack.extentreports.ExtentReports;
+
 import cucumber.api.java.en.Given; 
 import cucumber.api.java.en.Then; 
-import cucumber.api.java.en.When; 
+import cucumber.api.java.en.When;
 import org.junit.*; 
 
 public class WordPressStepDefinition { 
