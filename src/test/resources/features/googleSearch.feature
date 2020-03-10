@@ -1,6 +1,6 @@
 Feature: To Test Google search
 
-	@RegressionSuite
+	@SmokeSuite @RegressionSuite
 	Scenario Outline: Google search Test
 		Given Open browser and launch Google
 		When Enter "<SearchText>" to search
