@@ -23,7 +23,7 @@ public class Test {
 
 	@Given("^User search for Lenovo Laptop$")
 	public void user_searched_for_Lenovo_Laptop() throws Throwable {
-		System.out.println("User searched for Lenovo Laptop");
+		System.out.println("@SmokeSuite - User searched for Lenovo Laptop");
 	}
 
 	@When("^Add the first laptop that appears in the search result to the basket$")
@@ -33,17 +33,17 @@ public class Test {
 
 	@Then("^User basket should display with added item$")
 	public void user_basket_should_display_with_item() throws Throwable {
-		System.out.println("Bag is now contains the added product");
+		System.out.println("User basket should display with added item");
 	}
 
 	@Given("^User navigate for Lenovo Laptop$")
 	public void user_navigate_for_Lenovo_Laptop() throws Throwable {
-		System.out.println("User navigated for Lenovo Laptop");
+		System.out.println("@RegressionSuite - User navigate for Lenovo Laptop");
 	}
 
 	@When("^Add the laptop to the basket$")
 	public void add_the_laptop_to_the_basket() throws Throwable {
-		System.out.println("Laptop added to the basket");
+		System.out.println("Add the laptop to the basket");
 	}
 
 }
