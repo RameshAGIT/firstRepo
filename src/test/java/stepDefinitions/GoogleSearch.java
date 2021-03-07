@@ -22,15 +22,15 @@ public class GoogleSearch {
 		driver.manage().window().maximize();
 	}
 
-	@When("^Enter \"([^\"]*)\" to search$")
+	@When("^Enter \"(.*?)\" to search$")
 	public void enter_search_key_word(String searchTxt) throws Throwable {
 		driver.findElement(By.name("q")).sendKeys(searchTxt);
 		driver.findElement(By.name("btnK")).submit();
 	}
 
-	@Then("^User should able to search$")
-	public void user_should_able_to_search() throws Throwable {
-		driver.findElement(By.cssSelector("#rso > div:nth-child(1) > div > div > div > div > div.r > a > h3")).click();   
+	@Then("^User should able to search \"(.*?)\"$")
+	public void user_should_able_to_search(String searchTxt) throws Throwable {
+		driver.findElement(By.xpath("//span[contains(text(),'"+searchTxt+"')] | //h3[contains(text(),'\"+searchTxt+\"')]")).click();   
 	}
 
 	//@After

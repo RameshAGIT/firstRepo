@@ -8,8 +8,8 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import cucumber.api.testng.AbstractTestNGCucumberTests; 
 
-//@RunWith(Cucumber.class) 
-@CucumberOptions(features="src/test/resources/features",
+@RunWith(Cucumber.class) 
+@CucumberOptions(features="src/test/resources/features/Sample.feature",
 					glue={"stepDefinitions"},
 					tags= {"@SmokeSuite"},
 					plugin = {"com.cucumber.listener.ExtentCucumberFormatter:test-output/cucumber-reports/report.html"},
