@@ -1,0 +1,550 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 112800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "PlaceAPI.setup()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Verify if Place is being successfully added using AddPlaceAPI",
+        "description": "",
+        "id": "validating-place-api;verify-if-place-is-being-successfully-added-using-addplaceapi;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 735768100,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 4,
+                "value": "#Given Add Place Payload"
+              }
+            ],
+            "line": 5,
+            "name": "Add Place Payload with \"JohnSmith\" \"123 South dr\" \"English\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "JohnSmith",
+                  "offset": 24
+                },
+                {
+                  "val": "123 South dr",
+                  "offset": 36
+                },
+                {
+                  "val": "English",
+                  "offset": 51
+                }
+              ],
+              "location": "PlaceAPI.add_Place_Payload_with(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2760033900,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 6,
+                "value": "#When User calls \"maps/api/place/add/json\" with POST request"
+              }
+            ],
+            "line": 7,
+            "name": "User calls \"AddPlaceAPI\" with \"POST\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AddPlaceAPI",
+                  "offset": 12
+                },
+                {
+                  "val": "POST",
+                  "offset": 31
+                }
+              ],
+              "location": "PlaceAPI.user_calls_with_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1793700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "PlaceAPI.api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 355088000,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 9,
+                "value": "## We can use same step definition for line 7 \u0026 8. Just want to understand with default and JsonPath methods"
+              }
+            ],
+            "line": 10,
+            "name": "\"scope\" in response body is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "scope",
+                  "offset": 1
+                },
+                {
+                  "val": "APP",
+                  "offset": 29
+                }
+              ],
+              "location": "PlaceAPI.in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11050900,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 11,
+                "value": "## So created 2 different steps to understand both concepts. Else we can acheive the same using same steps without \u0027Verify\u0027"
+              }
+            ],
+            "line": 12,
+            "name": "Verify \"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 8
+                },
+                {
+                  "val": "OK",
+                  "offset": 37
+                }
+              ],
+              "location": "PlaceAPI.Verify_in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2847807700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Verify placeId created matches to \"JohnSmith\" using \"GetPlaceAPI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "JohnSmith",
+                  "offset": 35
+                },
+                {
+                  "val": "GetPlaceAPI",
+                  "offset": 53
+                }
+              ],
+              "location": "PlaceAPI.verify_placeId_created_matches_to_using(String,String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1549100,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 15,
+                "value": "#Scenario not allowed here so using Scenario Outline to delete 2 places which creted. If we put 2nd scenario under exaples it will delelte only the last place id which was created"
+              },
+              {
+                "line": 16,
+                "value": "#Scenario: Verify Delete Place API functionality is working"
+              }
+            ],
+            "line": 17,
+            "name": "Delete place payload",
+            "match": {
+              "location": "PlaceAPI.delete_Place_Payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3229303200,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "User calls \"DeletePlaceAPI\" with \"DELETE\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DeletePlaceAPI",
+                  "offset": 12
+                },
+                {
+                  "val": "DELETE",
+                  "offset": 34
+                }
+              ],
+              "location": "PlaceAPI.user_calls_with_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 291500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "PlaceAPI.api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 31266800,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Verify \"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 8
+                },
+                {
+                  "val": "OK",
+                  "offset": 37
+                }
+              ],
+              "location": "PlaceAPI.Verify_in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 39500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "PlaceAPI.setup()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "Verify if Place is being successfully added using AddPlaceAPI",
+        "description": "",
+        "id": "validating-place-api;verify-if-place-is-being-successfully-added-using-addplaceapi;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2700600,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 4,
+                "value": "#Given Add Place Payload"
+              }
+            ],
+            "line": 5,
+            "name": "Add Place Payload with \"JimJohn\" \"234 North dr\" \"French\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "JimJohn",
+                  "offset": 24
+                },
+                {
+                  "val": "234 North dr",
+                  "offset": 34
+                },
+                {
+                  "val": "French",
+                  "offset": 49
+                }
+              ],
+              "location": "PlaceAPI.add_Place_Payload_with(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1286258200,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 6,
+                "value": "#When User calls \"maps/api/place/add/json\" with POST request"
+              }
+            ],
+            "line": 7,
+            "name": "User calls \"AddPlaceAPI\" with \"POST\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AddPlaceAPI",
+                  "offset": 12
+                },
+                {
+                  "val": "POST",
+                  "offset": 31
+                }
+              ],
+              "location": "PlaceAPI.user_calls_with_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 333000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "PlaceAPI.api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 34018800,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 9,
+                "value": "## We can use same step definition for line 7 \u0026 8. Just want to understand with default and JsonPath methods"
+              }
+            ],
+            "line": 10,
+            "name": "\"scope\" in response body is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "scope",
+                  "offset": 1
+                },
+                {
+                  "val": "APP",
+                  "offset": 29
+                }
+              ],
+              "location": "PlaceAPI.in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14957500,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 11,
+                "value": "## So created 2 different steps to understand both concepts. Else we can acheive the same using same steps without \u0027Verify\u0027"
+              }
+            ],
+            "line": 12,
+            "name": "Verify \"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 8
+                },
+                {
+                  "val": "OK",
+                  "offset": 37
+                }
+              ],
+              "location": "PlaceAPI.Verify_in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2895012900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Verify placeId created matches to \"JimJohn\" using \"GetPlaceAPI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "JimJohn",
+                  "offset": 35
+                },
+                {
+                  "val": "GetPlaceAPI",
+                  "offset": 51
+                }
+              ],
+              "location": "PlaceAPI.verify_placeId_created_matches_to_using(String,String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7366800,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 15,
+                "value": "#Scenario not allowed here so using Scenario Outline to delete 2 places which creted. If we put 2nd scenario under exaples it will delelte only the last place id which was created"
+              },
+              {
+                "line": 16,
+                "value": "#Scenario: Verify Delete Place API functionality is working"
+              }
+            ],
+            "line": 17,
+            "name": "Delete place payload",
+            "match": {
+              "location": "PlaceAPI.delete_Place_Payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3347777000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "User calls \"DeletePlaceAPI\" with \"DELETE\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DeletePlaceAPI",
+                  "offset": 12
+                },
+                {
+                  "val": "DELETE",
+                  "offset": 34
+                }
+              ],
+              "location": "PlaceAPI.user_calls_with_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 151500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "PlaceAPI.api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 12429600,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Verify \"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 8
+                },
+                {
+                  "val": "OK",
+                  "offset": 37
+                }
+              ],
+              "location": "PlaceAPI.Verify_in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Validating Place API",
+    "description": "",
+    "id": "validating-place-api",
+    "keyword": "Feature",
+    "uri": "src/test/java/resources/features/placeAPI.feature"
+  }
+]
