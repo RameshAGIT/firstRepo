@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>CucumberSelenium</groupId>
@@ -99,6 +100,12 @@
 			<version>1.10.19</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>3.0.6</version>
+			<scope>test</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>info.cukes</groupId>
@@ -107,9 +114,19 @@
 			<version>LATEST</version>
 		</dependency>
 		<dependency>
-    <groupId>net.masterthought</groupId>
-    <artifactId>cucumber-reporting</artifactId>
-    <version>5.5.2</version>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-reporting</artifactId>
+			<version>5.5.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>5.0.0</version>
+		</dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>5.0.0</version>
 </dependency>
 	</dependencies>
 	<build>
@@ -120,8 +137,8 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.14.1</version>
 				<configuration>
-				<parallel>classes</parallel>
-        <useUnlimitedThreads>true</useUnlimitedThreads>
+					<parallel>classes</parallel>
+					<useUnlimitedThreads>true</useUnlimitedThreads>
 					<!-- Suite testng xml file to consider for test execution -->
 					<suiteXmlFiles>
 						<suiteXmlFile>testng-cucumber.xml</suiteXmlFile>
